@@ -1,0 +1,26 @@
+.sidebar {
+  min-height: 50vh;
+}
+@media screen and (max-width: 1340px) {
+  nav.sidebar {
+    display: none;
+  }
+}
+@media screen and (max-width: 1279px) {
+  body article img {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 1023px) {
+  body article > * {
+    width: calc(100vw - 40px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .logo {
+    width: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

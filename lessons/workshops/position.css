@@ -1,0 +1,27 @@
+.redBox {
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  position: absolute;
+  top: 80px;
+  left: 200px;
+  transition: 0.1s;
+}
+.redBox:hover {
+  transform: scale(2);
+  transition: 0.3s;
+}
+.blackBox {
+  width: 60px;
+  height: 300px;
+  background-color: black;
+  position: absolute;
+  top: 30px;
+  left: 280px;
+  transform: rotate(-30deg);
+}
+.blackBox:hover {
+  transform: rotate(30deg);
+  transition: 0.3s;
+}

@@ -1,0 +1,29 @@
+nav.sidebar {
+  width: 280px;
+  display: block;
+  position: fixed;
+  left: 20px;
+  font-size: 15px;
+  opacity: 0.2;
+  transition: 0.4s;
+}
+nav.sidebar:hover {
+  opacity: 1;
+  transition: 0.8s;
+}
+nav.sidebar a {
+  text-decoration: none;
+  color: grey;
+}
+nav.sidebar a:hover {
+  color: black;
+}
+nav.sidebar li {
+  margin: 6px 0;
+}
+nav.sidebar h2 {
+  font-weight: bold;
+}
+nav.sidebar ol > ol {
+  margin-left: 10px;
+}
