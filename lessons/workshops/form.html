@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="stylesheets/form.css" />
+    <script src="javascripts/form.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a class="logo" href="form.html"></a>
+        <a href="cursor.html">Магазин</a>
+        <a href="append-remove.html">Mac</a>
+        <a href="dopfunctions.html">iPad</a>
+        <a href="js-basics.html">iPhone</a>
+        <a href="js-functions.html">Watch</a>
+        <a href="model.html">AirPods</a>
+        <a href="">TV и Дом</a>
+        <a href="">Только в Apple</a>
+        <a href="">Аксессуары</a>
+        <a href="">Поддержка</a>
+        <a class="search" href=""></a>
+        <a class="bag" href=""></a>
+      </div>
+    </nav>
+
+    <div class="banner">
+      <h1>Создание Аккаунта Apple</h1>
+      <div class="colors">
+        <div class="color c1"></div>
+        <div class="color c2"></div>
+        <div class="color c3"></div>
+        <div class="color c4"></div>
+      </div>
+    </div>
+
+    <form action="" method="">
+      <p class="lid">
+        Одного Аккаунта Apple достаточно для доступа ко всем сервисам Apple.
+        <br />
+        Уже есть Аккаунт Apple?
+        <a href="https://account.apple.com/sign-in" target="_blank"
+          >Войдите в систему</a
+        >
+      </p>
+      <div class="names">
+        <span class="placeholder">
+          <input type="text" name="name" value="" placeholder="" />
+        </span>
+        <span class="placeholder">
+          <input type="text" name="surname" value="" placeholder="" />
+        </span>
+      </div>
+
+      <select name="country" id="country">
+        <option value="ru">Россия</option>
+        <option value="de">Германия</option>
+        <option value="fr">Франция</option>
+        <option value="usa">США</option>
+      </select>
+
+      <div class="info">
+        <p>Дата рождения</p>
+        <div class="circle birth">?</div>
+        <div class="text-birth">
+          Эти данные определяют сервисы, доступные для учётной записи
+        </div>
+      </div>
+
+      <div class="date-of-birth">
+        <select name="date" id="date">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+
+        <select name="month" id="month">
+          <option value="jan">января</option>
+          <option value="feb">февраля</option>
+          <option value="mar">марта</option>
+          <option value="apr">апереля</option>
+          <option value="may">мая</option>
+        </select>
+
+        <select name="year" id="year">
+          <option value="2001">2001</option>
+          <option value="2002">2002</option>
+          <option value="2003">2003</option>
+          <option value="2004">2004</option>
+          <option value="2005">2005</option>
+          <option value="2006">2006</option>
+          <option value="2007">2007</option>
+          <option value="2008">2008</option>
+          <option value="2009">2009</option>
+          <option value="2010">2010</option>
+        </select>
+      </div>
+
+      <hr />
+
+      <span class="placeholder">
+        <input type="email" name="email" value="" placeholder="" />
+      </span>
+      <p>Это Ваш новый Аккаунт Apple.</p>
+      <span class="placeholder">
+        <input type="password" name="password" value="" placeholder="" />
+      </span>
+      <span class="placeholder">
+        <input type="password" name="conf-password" value="" placeholder="" />
+      </span>
+
+      <hr />
+
+      <select name="phone-code" id="phone-code">
+        <option value="7">+7 (Россия)</option>
+        <option value="49">+49 (Германия)</option>
+        <option value="49">+49 (Франция)</option>
+        <option value="33">+33 (США)</option>
+      </select>
+
+      <span class="placeholder">
+        <input type="tel" name="phone-number" value="" placeholder="" />
+        <div class="circle">?</div>
+        <div class="text-tel">
+          Этот номер телефона будет использоваться для проверки Вашей личности и
+          восстановления пароля, если Вы его забудете.
+        </div>
+      </span>
+
+      <p>
+        Введите номер телефона, к которому у вас всегда есть доступ. Этот номер
+        будет использоваться для подтверждения личности при выполнении входа на
+        новом устройстве или в новом браузере. За обмен сообщениями и передачу
+        данных может взиматься плата.
+      </p>
+
+      <div class="radio-buttons">
+        <p>Подтверждение:</p>
+        <div>
+          <input type="radio" name="verify" id="verify" />
+          <label>Текстовое сообщение</label>
+        </div>
+        <div>
+          <input type="radio" name="verify" id="verify" />
+          <label>Телефонный звонок</label>
+        </div>
+      </div>
+
+      <hr />
+
+      <label>
+        <input type="checkbox" />
+        Анонсы
+        <span>
+          Получайте сообщения электронной почты и другие уведомления от Apple, в
+          том числе анонсы, рекламные материалы, рекомендации и информацию о
+          новых продуктах, программном обеспечении и услугах компании Apple.
+        </span>
+      </label>
+      <label>
+        <input type="checkbox" />
+        Приложения, музыка, ТВ и многое другое
+        <span>
+          Получайте сообщения электронной почты и другие уведомления от Apple, в
+          том числе о новых релизах, эксклюзивном контенте, специальных
+          предложениях, а также рекламные материалы и рекомендации для
+          приложений, музыки, фильмов, ТВ, книг, подкастов, Apple Pay и многого
+          другого.
+        </span>
+      </label>
+
+      <button type="submit" name="button">Продолжить</button>
+    </form>
+  </body>
+</html>

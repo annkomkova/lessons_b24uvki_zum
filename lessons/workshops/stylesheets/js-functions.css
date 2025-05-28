@@ -1,0 +1,35 @@
+h1 {
+  color: red;
+}
+.header {
+  color: blue;
+}
+#header {
+  color: green;
+}
+.demoButton {
+  width: 90px;
+  height: 36px;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.big {
+  width: 60vw;
+  height: 60vw;
+}
+.circle {
+  border-radius: 100%;
+  background-color: grey;
+  transition: all 0.7s ease;
+}
+.red {
+  background-color: red;
+}
+.small {
+  width: 10vw;
+  height: 10vw;
+}

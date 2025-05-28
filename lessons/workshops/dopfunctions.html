@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Дополнительные механики JS</title>
+    <link rel="stylesheet" href="stylesheets/dopfunctions.css" />
+    <script src="javascripts/dopfunctions.js"></script>
+  </head>
+  <body>
+    <section class="random">
+      <h1>Какой ты сегодня?</h1>
+      <button>???</button>
+    </section>
+
+    <!-- _____flip card_____ -->
+    <section>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Felis_silvestris_silvestris.jpg"
+              alt="Avatar"
+            />
+          </div>
+          <div class="flip-card-back">
+            <h1>John Doe</h1>
+            <p>Architect & Engineer</p>
+            <p>We love that guy</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- _____shakinh image_____ -->
+    <section>
+      <p class="shacking-text">
+        Кликни 10 раз по картинке, чтобы запустить анимацию!
+      </p>
+      <img
+        class="shacking-image"
+        src="https://catpeople.ru/images/catification/theory/samyij-drevnij-domashnij-kot/04.jpg"
+        alt="кот смотрит в камеру"
+      />
+    </section>
+
+    <!-- _____progress bar_____ -->
+    <section>
+      <div id="myProgress">
+        <div id="myBar"></div>
+      </div>
+
+      <div class="progressButton">клик</div>
+
+      <div class="progressDiv"></div>
+    </section>
+
+    <!-- _____popup_____ -->
+    <section>
+      <div class="popup">
+        Click me!
+        <span class="popuptext" id="myPopup">Popup text...</span>
+      </div>
+    </section>
+
+    <!-- _____draw svg on scroll_____ -->
+    <section>
+      <svg
+        id="mySVG"
+        width="84"
+        height="80"
+        viewBox="0 0 84 80"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          id="triangle"
+          d="M42 6.47214L49.9765 31.0213L50.4255 32.4033H51.8786H77.6911L56.8084 47.5755L55.6328 48.4296L56.0818 49.8115L64.0583 74.3607L43.1756 59.1885L42 58.3344L40.8244 59.1885L19.9417 74.3607L27.9182 49.8115L28.3672 48.4296L27.1916 47.5755L6.30888 32.4033H32.1214H33.5745L34.0235 31.0213L42 6.47214Z"
+          stroke="#FFDD00"
+          stroke-width="4"
+        />
+      </svg>
+    </section>
+
+    <!-- _____draggable_____ -->
+    <section>
+      <div id="mydiv">
+        <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+        <div id="mydivheader">Тяни</div>
+        <p contenteditable="true">Пиши</p>
+      </div>
+    </section>
+
+    <section class="box"></section>
+  </body>
+</html>

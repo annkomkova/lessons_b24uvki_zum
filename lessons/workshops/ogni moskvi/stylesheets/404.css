@@ -1,0 +1,32 @@
+.wrapper {
+  max-width: 1024px;
+  margin: 20vh auto;
+  display: flex;
+  justify-content: space-between;
+}
+h1 {
+  color: #ccc;
+  font-size: 230px;
+  margin: 0;
+}
+h2 {
+  font-size: 42px;
+}
+
+#text a,
+#text p,
+.back,
+#image a {
+  color: #111;
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+}
+#text p {
+  color: #888;
+}
+#text a:hover,
+.back:hover,
+#image a:hover {
+  text-decoration: underline;
+}

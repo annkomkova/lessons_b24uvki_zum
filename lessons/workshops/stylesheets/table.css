@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+table,
+#newRow {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+th,
+td,
+input,
+select,
+button {
+  font-weight: 400;
+  text-align: left;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  height: 34px;
+}
+th:nth-of-type(1),
+td:nth-of-type(1),
+input[name='week'] {
+  border-left: none;
+  width: 10%;
+}
+th:nth-of-type(2),
+td:nth-of-type(2),
+input[name='theme'] {
+  width: 35%;
+}
+th:nth-of-type(3),
+td:nth-of-type(3),
+select[name='subject'] {
+  width: 15%;
+}
+th:nth-of-type(4),
+td:nth-of-type(4),
+input[name='date'] {
+  width: 10%;
+}
+th:nth-of-type(5),
+td:nth-of-type(5),
+select[name='type'] {
+  width: 30%;
+}
+th:nth-of-type(6),
+td:nth-of-type(6),
+button {
+  border-right: none;
+  width: 26px;
+}
+td > span {
+  padding: 3px 6px;
+  border-radius: 2px;
+}
+.spanRed {
+  background-color: rgb(250, 214, 211);
+  color: rgb(139, 39, 48);
+}
+.spanBlue {
+  background-color: rgb(210, 228, 252);
+  color: rgb(38, 60, 104);
+}
+.spanGreen {
+  background-color: rgb(212, 236, 214);
+  color: rgb(59, 91, 70);
+}
+.spanGold {
+  background-color: rgb(254, 243, 199);
+  color: rgb(140, 101, 47);
+}
+.spanPink {
+  background-color: rgb(220, 219, 248);
+  color: rgb(71, 43, 132);
+}
+
+th > span {
+  color: #888;
+  padding-left: 20px;
+  position: relative;
+}
+th > span::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 1px;
+  left: 0;
+}
+.week::after {
+  background-image: url('../images/form-icons/icon-week-figma.svg');
+}
+.name::after {
+  background-image: url('../images/form-icons/icon-theme-figma.svg');
+}
+.subject::after,
+.type::after {
+  background-image: url('../images/form-icons/icon-select-figma.svg');
+}
+.date::after {
+  background-image: url('../images/form-icons/icon-date-figma.svg');
+}
+#newRow {
+  display: flex;
+}
+#newRow > * {
+  border-top: none;
+  border-right: none;
+}
+button {
+  cursor: pointer;
+  user-select: none;
+}

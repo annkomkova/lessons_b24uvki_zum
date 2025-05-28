@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: none;
+}
+section {
+  margin-bottom: 20px;
+}
+/* анимация попапа */
+.popup {
+  width: 10vw;
+  height: 10vw;
+  position: relative;
+}
+.popup .popupEl {
+  position: absolute;
+  top: 10vw;
+  left: 5vw;
+  opacity: 0;
+  text-align: center;
+  animation: popup 1s ease-in;
+  font-size: 4vw;
+  color: rgb(173, 0, 0);
+}
+.buttonPopup {
+  width: 8vw;
+  height: 4vw;
+  background-color: cornflowerblue;
+  color: white;
+  text-align: center;
+  line-height: 4vw;
+  border-radius: 0.5vw;
+}
+@keyframes popup {
+  0% {
+    opacity: 0.5;
+    transform: translateY(0) scale(0.5);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10vw);
+  }
+}
+
+/* анимация box */
+#box {
+  width: 20vw;
+  height: 20vw;
+  position: absolute;
+  top: calc(50% - 10vw);
+  left: calc(50% - 10vw);
+  /* background-color: #eee; */
+  transition: all 0.6s ease;
+  background-size: contain;
+}
+#box > div {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  position: absolute;
+  transition: all 1s ease;
+}
+#img0,
+#box {
+  background-image: url('../images/blick/0.jpg');
+}
+#img1 {
+  background-image: url('../images/blick/1.jpg');
+}
+#img2 {
+  background-image: url('../images/blick/2.jpg');
+}
+#img3 {
+  background-image: url('../images/blick/3.jpg');
+}
+
+#cursor {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: 30;
+  /* background-color: rgba(101, 101, 101, 0.5); */
+  border-radius: 100%;
+  /* border: 2px solid black; */
+  mix-blend-mode: difference;
+  animation: cursor 5s infinite linear;
+}
+#cursor.hover {
+  border-radius: 0%;
+}
+#cursor.active {
+  width: 30px;
+  height: 30px;
+}
+@keyframes cursor {
+  0% {
+    background-color: red;
+  }
+  20% {
+    background-color: gold;
+  }
+  40% {
+    background-color: green;
+  }
+  60% {
+    background-color: navy;
+  }
+  80% {
+    background-color: darkmagenta;
+  }
+  100% {
+    background-color: red;
+  }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <link rel="stylesheet" href="stylesheets/table.css" />
+    <script src="javascripts/table.js"></script>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th><span class="week">Неделя</span></th>
+          <th><span class="name">Название</span></th>
+          <th><span class="subject">Предмет</span></th>
+          <th><span class="date">Дата</span></th>
+          <th><span class="type">Тип</span></th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>#4.1</td>
+          <td>Верстаем форму</td>
+          <td><span class="spanRed">Технологии</span></td>
+          <td>02.04.2025</td>
+          <td><span class="spanGreen">Воркшоп</span></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>Вводная лекция</td>
+          <td><span class="spanBlue">Арт-практика</span></td>
+          <td>02.04.2025</td>
+          <td>
+            <span class="spanGold">Лекция</span>
+            <span class="spanPink">Домашка</span>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>#4.2</td>
+          <td>Продолжаем верстать форму</td>
+          <td><span class="spanRed">Технологии</span></td>
+          <td>09.04.2025</td>
+          <td><span class="spanGreen">Воркшоп</span></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>Варфрейминг</td>
+          <td><span class="spanBlue">Арт-практика</span></td>
+          <td>09.04.2025</td>
+          <td>
+            <span class="spanGold">Лекция</span>
+            <span class="spanPink">Домашка</span>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>Воркшоп по варфреймам</td>
+          <td><span class="spanBlue">Арт-практика</span></td>
+          <td>09.04.2025</td>
+          <td>
+            <span class="spanGreen">Воркшоп</span>
+            <span class="spanRed">Ревью</span>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>#4.3</td>
+          <td>Продолжаем верстать форму</td>
+          <td><span class="spanRed">Технологии</span></td>
+          <td>16.04.2025</td>
+          <td><span class="spanGreen">Воркшоп</span></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>Сетки в вебе</td>
+          <td><span class="spanBlue">Арт-практика</span></td>
+          <td>16.04.2025</td>
+          <td>
+            <span class="spanGold">Лекция</span>
+            <span class="spanPink">Домашка</span>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>#4.4</td>
+          <td>Хитрая типографика</td>
+          <td><span class="spanRed">Технологии</span></td>
+          <td>23.04.2025</td>
+          <td><span class="spanGreen">Воркшоп</span></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>UI-kit и прототипирование в фигме</td>
+          <td><span class="spanBlue">Арт-практика</span></td>
+          <td>23.04.2025</td>
+          <td>
+            <span class="spanGold">Лекция</span>
+            <span class="spanGreen">Воркшоп</span>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form id="newRow">
+      <input type="text" name="week" value="" />
+      <input type="text" name="theme" value="" />
+      <select name="subject">
+        <option value="Технологии">Технологии</option>
+        <option value="Арт-практика">Арт-практика</option>
+      </select>
+      <input type="text" name="date" value="" />
+      <select name="type">
+        <option value="Лекция">Лекция</option>
+        <option value="Воркшоп">Воркшоп</option>
+        <option value="Домашка">Домашка</option>
+        <option value="Ревью">Ревью</option>
+      </select>
+      <button type="button">+</button>
+    </form>
+  </body>
+</html>

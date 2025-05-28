@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 1280px;
+  border: 2px solid black;
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1,
+ul {
+  color: #9d8eff;
+  font-size: 50px;
+  font-weight: 900;
+}
+p {
+  color: rgba(255, 10, 18, 0.776);
+  font-size: 18px;
+  line-height: 21px;
+}
+.headerColor {
+  color: darkgreen;
+}
+div {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  border: 2px solid black;
+  /* border-radius: 100px; */
+}
+.red {
+  background-color: red;
+  margin-top: 60px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  margin-right: 40px;
+}
+.gold {
+  background-color: gold;
+  margin: 60px 40px 30px 20px;
+}
+.green {
+  background-color: green;
+  /* padding: 87.5px 0; */
+}
+.green p {
+  color: black;
+  margin: 87.5px 0;
+  text-align: center;
+}

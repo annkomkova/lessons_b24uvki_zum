@@ -1,0 +1,363 @@
+/* шрифты */
+
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../fonts/SF-Pro-Display-Ultralight.otf');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../fonts/SF-Pro-Display-Light.otf');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../fonts/SF-Pro-Display-Thin.otf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../fonts/SF-Pro-Display-Regular.otf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../fonts/SF-Pro-Display-Medium.otf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../fonts/SF-Pro-Display-Semibold.otf');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../fonts/SF-Pro-Display-Bold.otf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../fonts/SF-Pro-Display-Heavy.otf');
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../fonts/SF-Pro-Display-Black.otf');
+  font-weight: 900;
+}
+
+/* базовые стили */
+* {
+  box-sizing: border-box;
+  font-family: 'SF Pro', Helvetica, Arial, sans-serif;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-weight: 700;
+}
+h2 {
+  font-weight: 600;
+}
+h3 {
+  font-weight: 500;
+}
+p,
+label {
+  font-weight: 400;
+  font-size: 17px;
+}
+p.thin,
+button {
+  font-weight: 300;
+}
+p.light {
+  font-weight: 200;
+}
+
+/* стили для формы */
+form > * {
+  width: 460px;
+  display: block;
+  margin: 15px auto;
+}
+hr {
+  margin: 30px auto;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+button {
+  height: 42px;
+  background-color: #0271e4;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+}
+input,
+select,
+option {
+  font-size: 17px;
+  padding: 0 16px;
+}
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='password'],
+select {
+  height: 54px;
+  border-radius: 12px;
+  border: 1px solid #999;
+}
+.names,
+.date-of-birth,
+.info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.placeholder input {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+.names span {
+  width: 50%;
+}
+.date-of-birth select {
+  width: 33%;
+}
+.info {
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  background-color: #555;
+  color: white;
+  text-align: center;
+  border-radius: 100%;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+.circle:hover + .text-birth,
+.circle:hover + .text-tel {
+  display: block;
+}
+input + .circle {
+  transform: translate(430px, -36px);
+}
+input + p,
+label > span,
+.text-birth,
+.text-tel {
+  color: #555;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 20px;
+}
+label > span {
+  display: block;
+  margin: 6px 0 0 22px;
+}
+.radio-buttons > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.radio-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.text-birth,
+.text-tel {
+  position: absolute;
+  background-color: #ddd;
+  font-size: 14px;
+  line-height: 17px;
+  max-width: 44%;
+  border-radius: 12px;
+  padding: 18px;
+  transform: translate(50%, -70%);
+  z-index: 2;
+  display: none;
+}
+.text-tel {
+  transform: translate(126%, -150%);
+}
+input[type='radio'] {
+  width: 16px;
+  height: 16px;
+}
+.placeholder {
+  position: relative;
+}
+.placeholder::after {
+  content: 'Тест';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 17px;
+  color: #999;
+  padding: 17px 0 0 17px;
+  transition: all ease 0.2s;
+}
+.placeholder:has(input[name='name'])::after {
+  content: 'Имя';
+}
+.placeholder:has(input[name='surname'])::after {
+  content: 'Фамилия';
+}
+.placeholder:has(input[name='email'])::after {
+  content: 'name@example.com';
+}
+.placeholder:has(input[name='password'])::after {
+  content: 'Пароль';
+}
+.placeholder:has(input[name='conf-password'])::after {
+  content: 'Подтвердите пароль';
+}
+.placeholder:has(input[name='phone-number'])::after {
+  content: 'Номер телефона';
+}
+
+/* анимация псевдоэлемента через состояние инпута */
+.placeholder:has(input:focus)::after,
+.placeholder:has(input:not(:placeholder-shown))::after {
+  padding-top: 10px;
+  font-size: 10px;
+  transition: all ease 0.2s;
+}
+input:focus {
+  padding-top: 10px;
+}
+.lid {
+  font-size: 19px;
+  line-height: 28px;
+  text-align: center;
+}
+.lid a {
+  color: #0066cc;
+  text-decoration: none;
+}
+.lid a:hover {
+  text-decoration: underline;
+}
+
+/* анимация баннера */
+.banner {
+  width: 100%;
+  height: 300px;
+  background-color: #191919;
+  overflow: hidden;
+  padding-top: 40px;
+}
+h1 {
+  color: white;
+  width: 100%;
+  text-align: center;
+  top: 110px;
+  font-size: 34px;
+  font-weight: 700;
+  position: absolute;
+  z-index: 1;
+}
+.colors {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -50px auto;
+  animation: colors 20s linear infinite;
+  filter: blur(150px);
+}
+.color {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+}
+.c1 {
+  background-color: red;
+}
+.c2 {
+  background-color: blue;
+}
+.c3 {
+  background-color: rgb(0, 221, 255);
+}
+.c4 {
+  background-color: gold;
+}
+@keyframes colors {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* стили для меню */
+nav {
+  width: 100%;
+  height: 48px;
+  background-color: #191919;
+  display: flex;
+  justify-content: center;
+}
+.nav-wrapper {
+  width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-wrapper a {
+  font-size: 12px;
+  opacity: 0.6;
+  color: white;
+  text-decoration: none;
+  transition: opacity ease 0.2s;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.nav-wrapper a:hover {
+  opacity: 1;
+  transition: opacity ease 0.2s;
+}
+.logo,
+.search,
+.bag {
+  height: 100%;
+}
+.logo {
+  background-image: url('https://www.apple.com/ac/globalnav/7/ru_RU/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_apple_image__b5er5ngrzxqq_large.svg');
+  background-size: 14px 44px;
+  width: 14px;
+}
+.search {
+  background-image: url('https://www.apple.com/ac/globalnav/7/ru_RU/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_search_image__cbllq1gkias2_large.svg');
+  background-position: top center;
+  background-size: 15px 88px;
+  width: 15px;
+}
+.bag {
+  background-image: url('https://www.apple.com/ac/globalnav/7/ru_RU/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_bag_image__yzte50i47ciu_large.svg');
+  background-size: 13px 44px;
+  background-position: center;
+  width: 14px;
+}
