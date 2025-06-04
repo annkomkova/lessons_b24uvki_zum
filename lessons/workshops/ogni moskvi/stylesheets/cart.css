@@ -1,0 +1,19 @@
+#cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item img {
+  width: 10%;
+}
+.item button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+}

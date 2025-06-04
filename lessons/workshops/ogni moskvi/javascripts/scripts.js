@@ -24,6 +24,7 @@
 // }
 document.addEventListener('DOMContentLoaded', () => {
   showBurgerMenu()
+  updateCartCount()
 })
 
 function showBurgerMenu() {
@@ -32,4 +33,18 @@ function showBurgerMenu() {
   burger.addEventListener('click', () => {
     burger.classList.toggle('active')
   })
+}
+
+function getCart() {
+  return JSON.parse(localStorage.getItem('cart') || '[]')
+}
+
+function updateCartCount() {
+  let cart = getCart()
+
+  const count = cart.reduce((sum, item) => sum + (item.quantity || 0), 0)
+
+  if (count != 0) {
+    document.querySelector('.cart-count').innerHTML = count
+  }
 }
